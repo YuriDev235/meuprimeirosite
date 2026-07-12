@@ -7,7 +7,7 @@ botao.addEventListener("click", function(){
 
     imagem.src = "https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=" + encodeURIComponent(link);
 
-});
+})
 if(link.trim() === ""){
     alert("Digite um link primeiro!");
     return;
