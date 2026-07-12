@@ -1,146 +1,236 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+
 body{
-  
-    background-color: rgb(28, 27, 27);
-    overflow: hidden;
-   display: flex;
-    justify-content: center;
-    align-items: center;
+
+    font-family:Arial, Helvetica, sans-serif;
+
+    background:#1c1b1b;
+
+    overflow:hidden;
+
 }
+
+
 .fundo{
-    position: fixed;
-     position: fixed;
-    top: 0;
-    left: 0;
 
-    width: 100vw;
-    height: 100vh;
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
     background-image:
+    linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);
 
-    linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+    background-size:40px 40px;
 
-    linear-gradient(90deg,rgba(255,255,255,0.04)  1px, transparent 1px);
+    animation:moverGrid 2s linear infinite;
 
-    background-size: 40px 40px;
+    z-index:-1;
 
-    animation: moverGrid 2s linear infinite;
 }
+
 @keyframes moverGrid{
+
     from{
 
-        background-position: 5 5;
-    
+        background-position:0 0;
+
     }
 
     to{
-        background-position: 40px 40px;
-        
+
+        background-position:40px 40px;
+
     }
-   
 
 }
-.conteiner{
+
+.container{
+
+    width:100%;
+    min-height:100vh;
+
     display:flex;
+
     justify-content:center;
-    align-items: center;
-    height: 100vh;
-}
-.janela{
-     display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 40px;
-   width: 90%;
-    max-width: 700px;
-    min-height: 400px;
-    padding: 40px;
-    background-color: rgb(40, 40, 40);
-    margin:auto;
+
     align-items:center;
-    background: rgba(25,25,25,.75);
-    backdrop-filter: blur(15px);
-    border: 1px solid rgba(255,255,255,.08);
-    border-radius: 20px;
-    box-shadow: 0 20px 60px rgba(0,0,0,.4);
-   
+
+    padding:20px;
+
 }
-.texto{
-    color: aliceblue;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    text-align: center;
+
+
+.janela{
+
+    width:500px;
+    max-width:800px;
+
+    padding:40px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    background:rgba(25,25,25,.75);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:20px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:0 20px 60px rgba(0,0,0,.4);
+
 }
+
+
+h1{
+
+    color:white;
+
+    margin-bottom:30px;
+
+    font-size:52px;
+
+}
+
+
 input{
-     width: 350px;
-    height: 45px;
-    
-    
 
-    background: rgb(92, 92, 98);
+    width:100%;
 
-    border: none;
-    border-radius: 5px;
+    height:50px;
 
-    padding-left: 50px;
+    border:none;
 
-    color: white;
+    border-radius:10px;
 
-    font-size: 16px;
-}
-button{
-    width: 180px;
-    height: 50px;
+    background:#5d5d63;
 
-    margin-top: 20px;
+    color:white;
 
-    border: none;
-    border-radius: 10px;
+    font-size:16px;
 
-    background: #3b82f6;
-    color: white;
+    padding:0 15px;
 
-    font-size: 17px;
-    font-weight: bold;
-
-    cursor: pointer;
-
-    transition: all .25s ease;
+    outline:none;
 
 }
 
-button:hover{
-    background: #2563eb;
-    transform: scale(1.03);
+input::placeholder{
+
+    color:#d1d1d1;
+
 }
+
+
+#gerar{
+
+    width:220px;
+
+    height:50px;
+
+    margin-top:20px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#3b82f6;
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+#gerar:hover{
+
+    background:#2563eb;
+
+    transform:translateY(-2px);
+
+}
+
+/* QR */
+
 .resultado{
-    width: 220px;
-    height: 220px;
 
-    margin-top: 30px;
-    margin-bottom: 20px; /* Espaço entre o QR e o botão */
+    width:220px;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height:220px;
+
+    margin-top:35px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
 }
+
 .resultado img{
-    width: 200px;
-    height: 200px;
+
+    width:220px;
+
+    display:block;
+
 }
+
+/* DOWNLOAD */
+
 #download{
-    display: none;
 
-    margin-top: 20px;
+    display:none;
 
-    width: 200px;
-    height: 45px;
+    width:220px;
 
-    border: none;
-    border-radius: 10px;
+    height:50px;
 
-    background: #22c55e;
-    color: white;
+    margin-top:20px;
 
-    font-size: 16px;
-    font-weight: bold;
+    border:none;
 
-    cursor: pointer;
+    border-radius:10px;
+
+    background:#2563eb;
+    
+    color:white;
+
+    font-size:17px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+#download:hover{
+
+    background:#2563eb;
+    transform:translateY(-2px);
+
 }
