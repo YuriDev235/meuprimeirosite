@@ -1,14 +1,31 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MEU PRIMEIRO SITE</title>
+    <title>Gerador de Qr Code </title>
 </head>
 <body>
-<h1>oi e meu primeiro site olha q legal</h1>
-<h2>eu sei q ta feio pq nao sei html </h2>
-<h3>mas um dia estara bonito</h3>
-<button>pera</button>
+<div class="fundo"></div>
+
+<div class="conteiner">
+
+    <div class="janela">
+
+        <h1 class="texto">Gerador de QR Code</h1>
+
+        <input id="link" type="text" placeholder="Cole um link aqui">
+
+        <button id="gerar">Gerar</button>
+
+        <div id="resultado" class="resultado">
+         <img id="qrcode"  src="" alt="QR Code">
+        </div>
+
+    </div>
+</div>
+</div>
+<script src="script.js"></script>
 </body>
 </html>
