@@ -1,0 +1,129 @@
+body{
+  
+    background-color: rgb(28, 27, 27);
+    overflow: hidden;
+   display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fundo{
+    position: fixed;
+     position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+    background-image:
+
+    linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+
+    linear-gradient(90deg,rgba(255,255,255,0.04)  1px, transparent 1px);
+
+    background-size: 40px 40px;
+
+    animation: moverGrid 2s linear infinite;
+}
+@keyframes moverGrid{
+    from{
+
+        background-position: 5 5;
+    
+    }
+
+    to{
+        background-position: 40px 40px;
+        
+    }
+   
+
+}
+.conteiner{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    height: 100vh;
+}
+.janela{
+     display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+   width: 90%;
+    max-width: 700px;
+    min-height: 400px;
+    padding: 40px;
+    background-color: rgb(40, 40, 40);
+    margin:auto;
+    align-items:center;
+    background: rgba(25,25,25,.75);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0,0,0,.4);
+   
+}
+.texto{
+    color: aliceblue;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+input{
+     width: 350px;
+    height: 45px;
+    
+    
+
+    background: rgb(92, 92, 98);
+
+    border: none;
+    border-radius: 5px;
+
+    padding-left: 50px;
+
+    color: white;
+
+    font-size: 16px;
+}
+button{
+    width: 180px;
+    height: 50px;
+
+    margin-top: 20px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #3b82f6;
+    color: white;
+
+    font-size: 17px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: all .25s ease;
+
+}
+
+button:hover{
+    background: #2563eb;
+    transform: scale(1.03);
+}
+.resultado{
+    width: 220px;
+    height: 220px;
+
+    margin: 40px auto 0;
+    border-radius: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: gray;
+}
+.resultado img{
+    width: 200px;
+    height: 200px;
+}
